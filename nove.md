@@ -1,0 +1,68 @@
+O nás:
+
+<section>
+
+   <h1>Kdo se skrývá za značkou Spade?</h1>
+   <div class="buble">
+    <img src="images/O nas.jpg" alt="O nás" class="obrazek">
+    <p>Jsem Eliška Kvítková a o rostliny se zajímám už od mala. Vystudovala jsem zahradnickou školu a dnes vedu zahradnictví <strong>Spade</strong>.</p>
+  </div>
+
+  <div class="buble">
+    <div class="minibuble">
+      <h3>Proč právě od nás?</h3>
+      <p>O rostliny se staráme jako by měli přijít na naší vlastní zahradu a chceme aby se i jim líbilo i u Vás.</p>
+    </div>
+    <img src="images/happy.jpg" alt="happy" class="obrazek">
+  </div>
+</section>
+
+
+Pojmy:
+
+<section>
+    <h3>Carmigo</h3>
+    <p>Šlechtitelská řada která se zaměřuje především na tvorbu samosprašných odrůd</p>
+    
+    <h3>Podnož</h3>
+    <p>Podnož je rostlina, nebo její část, která se používá pro očkování nebo roubování jiné rostliny.</p>
+    
+    <h3>Štěpařský vosk</h3>
+    <p>Pasta, která je určená k ošetření ran po řezu dřevin.</p>
+
+    <h3>Afinita</h3>
+    <p>Označuje určitou příbuznost, blízkost nebo vzájemný vztah.</p>
+
+    <h3>Roubovací nůž</h3>
+    <p>Slouží k řezání a úpravě rostlin, a musí být správně ostrý. </p>
+</section>
+
+nabidka:
+
+<section>
+
+  <div class="galerie">
+    <img src="images/B-bylinky.jpg" alt="" class="G-foto">
+    <img src="images/B-rajce.jpg" alt="" class="G-foto">
+    <img src="images/Zahrada2.jpg" alt="" class="G-foto">
+    <img src="images/balkon-ona.jpg" alt="" class="G-foto">
+    <img src="images/jahody.jpg" alt="" class="G-foto">
+    <img src="images/zahrada.jpg" alt="" class="G-foto">
+    <img src="images/B-salát.jpg" alt="" class="G-foto">
+    <img src="images/zahrada3.jpg" alt="" class="G-foto">
+  </div>
+</section>
+
++CSS
+.galerie{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+}
+
+
+.G-foto{
+  max-width: 350px;
+  height: auto;
+}

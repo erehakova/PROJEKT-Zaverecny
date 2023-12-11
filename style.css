@@ -32,7 +32,7 @@ body {
 .mini {
   width: 20px;
   height: auto;
-  margin: 10px;
+  margin: 5px;
 }
 
 
@@ -105,7 +105,7 @@ a {
 }
 
 .header_row_item {
-  padding: 17px 3px;
+  padding: 3px 3px;
 }
 
 .header_wrap {
@@ -177,7 +177,7 @@ footer {
 .li-buble {
   width: auto;
   height: auto;
-  border: 1px solid #899a6e;
+  border: 1px solid #a6b88d;
   border-radius: 5px;
   padding: 10px;
   margin: 5px;
@@ -185,13 +185,14 @@ footer {
 }
 
 .li-buble:hover {
-  background-color: #e2ebe3;
+  background-color: #a6b88d;
 }
 
+/*
 .maxibuble {
   display: flex;
 }
-
+*/
 .minibuble {
   width: auto;
   height: auto;
@@ -213,4 +214,23 @@ section .email {
   text-decoration-line: underline;
   font-weight: bold;
   font-size: 20px;
+}
+
+.prodejna {
+  max-width: 600px;
+}
+
+.header_block {
+  text-align: center;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.G-foto {
+  max-width: 350px;
+  height: auto;
 }
