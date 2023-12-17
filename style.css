@@ -11,9 +11,13 @@ html {
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 25px;
   font-family: 'Nunito';
   color: #36261b;
+}
+
+header {
+  padding: 10px;
 }
 
 a {
@@ -21,11 +25,14 @@ a {
   color: #36261b;
 }
 
+p {
+  padding: 5px;
+}
 
 
 header {
   display: grid;
-  grid-template-columns: repeat(3, 40px) 1fr;
+  grid-template-columns: repeat(3, 40px) 1fr 60px;
   grid-template-rows: 35px 300px;
 }
 
@@ -56,6 +63,8 @@ header {
 
 .menu {
   text-align: right;
+  grid-column: 4 / 6;
+  grid-row: 1;
 }
 
 .header_row_item {
@@ -137,7 +146,10 @@ footer a:hover {
   border-radius: 4px;
 }
 
-
+.G-foto {
+  max-width: 350px;
+  height: auto;
+}
 
 
 
@@ -146,6 +158,10 @@ footer a:hover {
 /*odsud je tablet verze*/
 
 @media screen and (min-width:833px) and (max-width:1243px) {
+  body {
+    margin: 0 100px;
+  }
+
   .menu__toggler {
     display: none;
   }
@@ -158,7 +174,6 @@ footer a:hover {
   .menu__item {
     border-bottom: 0;
     border-right: 1px solid #899a6e;
-
   }
 
   header {
@@ -167,6 +182,7 @@ footer a:hover {
   }
 
   .menu {
+    margin-right: 10px;
     text-align: center;
     grid-column: 1 / 2;
     grid-row: 1;
@@ -193,6 +209,7 @@ footer a:hover {
 
   .header_block {
     text-align: center;
+    margin: 10px;
   }
 
   .header_row_item {
@@ -267,6 +284,7 @@ footer a:hover {
 
   .header_block {
     text-align: center;
+    margin: 10px;
   }
 
   .header_row_item {
@@ -283,10 +301,5 @@ footer a:hover {
   .footer-grid-col2,
   .footer-grid-col3 {
     text-align: left;
-  }
-
-  .G-foto {
-    max-width: 350px;
-    height: auto;
   }
 }
