@@ -14,60 +14,6 @@ body {
   margin: 0;
   font-family: 'Nunito';
   color: #36261b;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 250px 1fr 300px;
-  grid-template-areas:
-    ". header header header header ."
-    ". section section section section ."
-    ". footer footer footer footer .";
-}
-
-.logo {
-  margin: 10px 5px;
-  width: auto;
-  height: 100px;
-}
-
-.mini {
-  width: 20px;
-  height: auto;
-  margin: 5px;
-}
-
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.heel {
-  color: #e2ebe3;
-  background-color: #36261b;
-  padding: 16px 24px;
-  height: 51px;
-  text-align: center;
-}
-
-.footer-grid {
-  background-color: #e2ebe3;
-}
-
-header,
-.footer-grid {
-  padding: 0 35px;
-}
-
-header .contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-header .name,
-.header_wrap,
-.header_menu,
-.header_row_block {
-  display: flex;
 }
 
 a {
@@ -76,48 +22,113 @@ a {
 }
 
 
-.button {
-  display: inline-block;
-  margin: 0 5px;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  background-color: #e2ebe3;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 20px;
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 40px) 1fr;
+  grid-template-rows: 35px 300px;
 }
 
-.button:hover {
-  background-color: #98a8a5;
+.logo {
+  margin: 10px 5px;
+  width: auto;
+  height: 100px;
 }
 
-.header_menu li {
-  margin: 0 5px;
-  padding: 2px;
+.company {
+  grid-column: span 4;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
+  margin: 5px;
+}
+
+.company__item {
+  color: #36261b;
+}
+
+.mini__mobil,
+.mini__login,
+.mini__kos {
+  width: 20px;
+  height: auto;
+  margin: 5px;
+}
+
+.menu {
+  text-align: right;
 }
 
 .header_row_item {
-  padding: 3px 3px;
+  display: none;
 }
 
-.header_wrap {
-  justify-content: center;
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu__toggler {
+  cursor: pointer;
+}
+
+.menu__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #a6b88d;
+}
+
+.menu__item {
+  border-bottom: 1px solid #899a6e;
+}
+
+.menu__link {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #36261b;
+}
+
+.menu__link:hover {
+  background-color: #899a6e;
+}
+
+.menu__checkbox:checked~.menu__list {
+  display: block;
 }
 
 .footer-grid {
+  background-color: #e2ebe3;
+  padding: 0 35px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+
 }
 
-.footer-grid-col li {
+.footer-grid-col3 li {
   margin: 0 5px;
   padding: 2px;
   text-decoration: none;
+  list-style: none;
   font-weight: bold;
+}
+
+
+.footer-grid {
+  display: block;
+  text-align: center;
+}
+
+.heel {
+  color: #e2ebe3;
+  background-color: #36261b;
+  padding: 16px 24px;
+  height: 51px;
+  text-align: center;
+  font-size: 10px;
 }
 
 footer a:hover {
@@ -126,107 +137,156 @@ footer a:hover {
   border-radius: 4px;
 }
 
-header {
-  grid-column: 2 / span 4;
+
+
+
+
+
+
+/*odsud je tablet verze*/
+
+@media screen and (min-width:833px) and (max-width:1243px) {
+  .menu__toggler {
+    display: none;
+  }
+
+  .menu__list {
+    display: flex;
+    border-radius: 5px;
+  }
+
+  .menu__item {
+    border-bottom: 0;
+    border-right: 1px solid #899a6e;
+
+  }
+
+  header {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 300px;
+  }
+
+  .menu {
+    text-align: center;
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .menu__item:hover {
+    background-color: #899a6e;
+  }
+
+  .mini__mobil {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  .mini__login {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+
+  .mini__kos {
+    grid-column: 4 / 5;
+    grid-row: 1;
+  }
+
+  .header_block {
+    text-align: center;
+  }
+
+  .header_row_item {
+    display: block;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .footer-grid-col1 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
 }
 
-section {
-  grid-column: 2 / span 4;
-  margin: 20px 0;
-  padding: 10px 35px;
-}
+/*odsud je PC verze*/
+@media screen and (min-width:1244px) {
+  body {
+    margin: 0 200px;
+  }
 
-.priprava {
-  text-align: center;
-}
+  .menu__toggler {
+    display: none;
+  }
 
-footer {
-  grid-column: 2 / span 4;
-}
+  .menu__list {
+    display: flex;
+    border-radius: 5px;
+  }
 
-.buble {
-  width: auto;
-  height: auto;
-  border: 1px solid #899a6e;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "h3 obrazek"
-}
+  .menu__item {
+    border-bottom: 0;
+    border-right: 1px solid #899a6e;
 
-.buble h3,
-.buble p,
-.minibuble h3,
-.minibuble p,
-.li-buble h3,
-.li-buble p {
-  margin: 0;
-  padding: 0;
-}
+  }
+
+  header {
+    grid-template-columns: 1fr repeat(3, 100px);
+    grid-template-rows: 100px 300px;
+  }
+
+  .menu {
+    text-align: center;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    margin-right: 10px;
+  }
+
+  .menu__item:hover {
+    background-color: #899a6e;
+  }
+
+  .mini__mobil {
+    grid-column: 2 / 3;
+    grid-row: 1;
+  }
+
+  .mini__login {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
 
 
-.li-buble {
-  width: auto;
-  height: auto;
-  border: 1px solid #a6b88d;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
-}
+  .mini__kos {
+    grid-column: 4 / 5;
+    grid-row: 1;
+  }
 
-.li-buble:hover {
-  background-color: #a6b88d;
-}
+  .header_block {
+    text-align: center;
+  }
 
-/*
-.maxibuble {
-  display: flex;
-}
-*/
+  .header_row_item {
+    display: block;
+  }
 
-.minibuble {
-  width: auto;
-  height: auto;
-  padding: 10px;
-  margin: 5px;
-  text-align: start;
-}
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    width: 100%;
+  }
 
-.obrazek {
-  max-width: 280px;
-  height: auto;
-}
+  .footer-grid-col2,
+  .footer-grid-col3 {
+    text-align: left;
+  }
 
-.pozice {
-  list-style-type: circle;
-}
-
-section .email {
-  text-decoration-line: underline;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.prodejna {
-  max-width: 600px;
-}
-
-.galerie {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-.G-foto {
-  max-width: 350px;
-  height: auto;
-}
-
-.header_block {
-  display: inline;
-  text-align: center;
+  .G-foto {
+    max-width: 350px;
+    height: auto;
+  }
 }

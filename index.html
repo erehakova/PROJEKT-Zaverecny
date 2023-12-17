@@ -13,54 +13,57 @@
   <body>
     <!-- hlavička-->
     <header>
-      <div class="header_row contact">
-        <div class="header_row_block">
-          <ul class="header_menu">
-            <li>
-              <a href="baleni.html" title="Balení a přeprava"
-                >Balení a přeprava</a
-              >
-            </li>
-            <li><a href="Onas.html" title="O nás">O nás</a></li>
-            <li><a href="druhy.html" title="Druhy zahrad">Druhy zahrad</a></li>
-          </ul>
-        </div>
+      <a href="#" class="minibox">
         <div class="header_block">
-          <img src="images/phone.svg" alt="mobil" class="mini" />
+          <img src="images/phone.svg" alt="mobil" class="mini__mobil" />
           <div class="header_row_item">213 546 879</div>
         </div>
+      </a>
+      <a href="#" class="minibox">
         <div class="header_block">
-          <img src="images/login.svg" alt="login" class="mini" />
+          <img src="images/login.svg" alt="login" class="mini__login" />
           <div class="header_row_item">Přihlášení</div>
         </div>
+      </a>
+      <a href="#" class="minibox">
         <div class="header_block">
-          <img src="images/kos.svg" alt="košík" class="mini" />
-          <div class="header_row_item"><a href="#" title="Košík">Košík</a></div>
+          <img src="images/kos.svg" alt="košík" class="mini__kos" />
+          <div class="header_row_item">košík</div>
         </div>
-      </div>
-      <div class="header_row name">
-        <img src="images/logo.svg" alt="logo" class="logo" />
-        <a href="index.html" title="Zahradnictví"
-          ><h1>Zahradnictví Spade</h1></a
-        >
-      </div>
-      <div class="header_row menu">
-        <ul class="header_wrap">
-          <li>
-            <a href="nabidka.html" title="produkty" class="button">Galerie</a>
+      </a>
+
+      <nav class="menu">
+        <input type="checkbox" class="menu__checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="baleni.html">Balení a přeprava</a>
           </li>
-          <li>
-            <a href="pojmy.html" title="Slovník" class="button"
-              >Slovník pojmů</a
-            >
+          <li class="menu__item">
+            <a class="menu__link" href="Onas.html">O nás</a>
           </li>
-          <li>
-            <a href="navody.html" title="Návody" class="button"
-              >Návody na pěstování rostlin</a
-            >
+          <li class="menu__item">
+            <a class="menu__link" href="druhy.html">Služby</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="nabidka.html">Galerie</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="pojmy.html">Slovník pojmů</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="navody.html">Návody na pěstování</a>
           </li>
         </ul>
-      </div>
+      </nav>
+
+      <a href="#" class="company">
+        <img src="images/logo.svg" alt="logo" class="logo" />
+        <div class="company__item" title="zahradnictví">
+          <h1>Zahradnictví Spade</h1>
+        </div>
+      </a>
     </header>
     <!-- Začátek sekce -->
 
@@ -149,11 +152,12 @@
     <!-- Konec sekce -->
     <footer>
       <div class="footer-grid">
-        <div class="footer-grid-col">
+        <div class="footer-grid-col1">
           <h2>Zahradnictví Spade</h2>
           <img src="images/logo.svg" alt="logo" class="logo" />
         </div>
-        <div class="footer-grid-col">
+
+        <div class="footer-grid-col2">
           <h2>Kontakty</h2>
           <p>
             <span class="footer-tittle"><strong>Telefon:</strong></span>
@@ -173,7 +177,7 @@
             463 11 Liberec-Vratislavice nad Nisou
           </p>
         </div>
-        <div class="footer-grid-col">
+        <div class="footer-grid-col3">
           <h2>Užitečné informace</h2>
           <ul>
             <li><a href="Onas.html" title="O nás">O nás</a></li>
