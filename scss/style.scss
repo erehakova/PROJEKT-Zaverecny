@@ -5,6 +5,7 @@ $svetly-list: #a6b88d;
 $tmavy-list: #899a6e;
 $default-font: 'Nunito';
 $spacer: 5px; //mezera
+$radius: 10px;
 
 /* intuitivnější box-sizing pro všechny prvky na stránce */
 html {
@@ -291,4 +292,39 @@ footer a:hover {
 .G-foto {
   max-width: 350px;
   height: auto;
+  border-radius: $radius;
+}
+
+.obrazek {
+  border-radius: $radius;
+  max-width: 280px;
+  height: auto;
+}
+
+.priprava {
+  text-align: center;
+}
+
+.li-buble {
+  width: auto;
+  height: auto;
+  border: 1px solid #a6b88d;
+  border-radius: $radius;
+  padding: $spacer * 2;
+  margin: $spacer;
+  text-align: center;
+  list-style: none;
+}
+
+h1 {
+  padding: $spacer * 8;
+}
+
+.buble {
+  width: auto;
+  height: auto;
+  border: 1px solid #899a6e;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
 }
